@@ -1,0 +1,39 @@
+{
+  "name": "grunt-interactive-shell",
+  "description": "Running shell commands interactively",
+  "version": "0.0.0",
+  "homepage": "https://github.com/devex-web-frontend/grunt-interactive-shell",
+  "author": {
+    "name": "mankdev",
+    "email": "tema@mankdev.name"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devex-web-frontend/grunt-interactive-shell.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devex-web-frontend/grunt-interactive-shell/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/devex-web-frontend/grunt-interactive-shell/blob/master/LICENSE-MIT"
+    }
+  ],
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "devDependencies": {
+    "grunt-contrib-jshint": "~0.6.0",
+    "grunt": "~0.4.2"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.2"
+  },
+  "keywords": [
+    "gruntplugin"
+  ]
+}
