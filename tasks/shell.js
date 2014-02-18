@@ -15,16 +15,16 @@ module.exports = function(grunt) {
 			cwd: process.cwd(),
 			stdio: [process.stdin, process.stdout, process.stderr]
 		},
-		isWinShell = (process.platform === 'win32'),
-		shell = isWinShell ? 'cmd' : 'sh',
-		shellFlag = isWinShell ? '/c' : '-c';
+		isWin = (process.platform === 'win32'),
+		shell = isWin ? 'cmd' : 'sh',
+		shellFlag = isWin ? '/c' : '-c';
 
-	if (isWinShell) {
+	if (isWin) {
 		spawnCfg.windowsVerbatimArguments = true;
 	}
 
 	grunt.registerMultiTask('shell', 'Running shell commands interactively', function() {
-		var resolve = this.async(),
+		var done = this.async(),
 			command = this.data.command,
 			subProcess = spawn(shell, [shellFlag, command], spawnCfg);
 
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
 			if (code) {
 				grunt.fail.fatal('Child process, spawned by ' + command.whiteBG + ' closed with code ' + code, code);
 			}
-			resolve();
+			done();
 		});
 	});
 
