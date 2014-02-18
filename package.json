@@ -1,7 +1,7 @@
 {
   "name": "grunt-interactive-shell",
   "description": "Running shell commands interactively",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "homepage": "https://github.com/devex-web-frontend/grunt-interactive-shell",
   "author": {
     "name": "mankdev",
